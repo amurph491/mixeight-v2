@@ -1,3 +1,5 @@
+<div class="row">
+<div class="span6 offset3">
 <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +12,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -28,6 +29,8 @@
     <%= f.number_field :bpm %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Upload song", class: "btn btn-lare btn-primary"%>
   </div>
 <% end %>
+  </div>
+  </div>
