@@ -20,6 +20,8 @@
   <%= @song.bpm %>
 </p>
 
+<section id="audio"></section>
+<li><%= link_to image_tag('play.jpg'), @song.song_file.url, :class => "html5" %>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
