@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521040734) do
+ActiveRecord::Schema.define(:version => 20120523053404) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20120521040734) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "song_id"
+  end
+
+  create_table "memberships", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "group_id"
+    t.integer  "user_id"
   end
 
   create_table "songs", :force => true do |t|
@@ -48,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120521040734) do
     t.string   "song_file_content_type"
     t.integer  "song_file_file_size"
     t.datetime "song_file_updated_at"
+    t.integer  "group_id"
   end
 
   create_table "users", :force => true do |t|

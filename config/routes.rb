@@ -6,7 +6,7 @@ Mixeight::Application.routes.draw do
 
   resources :songs
   
-  root to: 'static_pages#about'
+  root to: 'songs#index'
   
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
