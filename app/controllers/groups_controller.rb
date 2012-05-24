@@ -36,6 +36,12 @@ class GroupsController < ApplicationController
   def edit
     @group = Group.find(params[:id])
   end
+  
+  def join
+    @group = Group.find(params[:id])
+    @group.users << current_user unless @group.users.include? current_user
+    redirect_to @group
+  end
 
   # POST /groups
   # POST /groups.json

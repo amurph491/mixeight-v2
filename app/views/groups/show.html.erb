@@ -2,11 +2,11 @@
 
 <p>
   <b>Name:</b>
-  <%= @group.name %>
+  <%= link_to "Join #{@group.name}", join_group_path %>
   <b>Users:</b>
-  <%= @group.users.first.email %>
+  <%= @group.users.first.email if @group.users.any? %>
   <b>Songs:</b>
-  <%= @group.songs.first.title %>
+  <%= @group.songs.first.title if @group.songs.any? %>
 </p>
 
 
