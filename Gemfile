@@ -7,6 +7,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
+gem 'cancan'
 
 
 # Bundle edge Rails instead:

@@ -6,9 +6,22 @@
   <b>Users:</b>
   <%= @group.users.first.email if @group.users.any? %>
   <b>Songs:</b>
-  <%= @group.songs.first.title if @group.songs.any? %>
 </p>
 
+<table>
+<% @group.songs.each do |s| %>
+  <tr>
+    <td>
+      <b>Title:</b>
+      <%= s.title %>
+    </td>
+    <td>
+      <b>Artist:</b>
+      <%= s.artist %>
+    </td>
+  </tr>
+<% end %>
+</table>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
