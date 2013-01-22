@@ -3,7 +3,7 @@
 <table>
 
 <% if signed_in? %>
-<% Group.all.each do |group| %>
+<% Group.each do |group| %>
   <tr>
     <td><%= link_to group.name, group %></td>
     <td><%= link_to 'Show', group %></td>
