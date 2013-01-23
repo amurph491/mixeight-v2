@@ -6,12 +6,10 @@
     <%= @group.name %>
   <% else %>
     <%= link_to "Join #{@group.name}", join_group_path %>
-  <%= end %>
-  <b>Users:</b>
-  <%= @group.users.first.email if @group.users.any? %>
-  <b>Songs:</b>
+  <% end %>
 </p>
 
+<b>Songs:</b>
 <table>
 <% @group.songs.each do |s| %>
   <tr>

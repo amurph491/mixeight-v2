@@ -7,11 +7,9 @@
   <% else %>
     <%= link_to "Join #{@group.name}", join_group_path %>
   <% end %>
-  <b>Users:</b>
-  <%= @group.users.first.email if @group.users.any? %>
-  <b>Songs:</b>
 </p>
 
+<b>Songs:</b>
 <table>
 <% @group.songs.each do |s| %>
   <tr>
@@ -28,5 +26,5 @@
 <% end %>
 </table>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Edit', edit_group_path(@group) %>
 <%= link_to 'Back', groups_path %>
