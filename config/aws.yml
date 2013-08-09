@@ -1,0 +1,8 @@
+development:
+  access_key_id: AKIAIAH24OEHSDVAFZIQ
+  secret_access_key: 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
+  bucket: mixeight_dev
+production:
+  access_key_id: AKIAIAH24OEHSDVAFZIQ
+  secret_access_key: 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
+  bucket: mixeight

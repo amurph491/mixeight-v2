@@ -18,9 +18,9 @@
     <td><%= song.artist %></td>
     <td><%= song.description %></td>
     <td><%= song.bpm %></td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= button_to 'Show', song, method: :get%></td>
+    <td><%= button_to 'Edit', edit_song_path(song), method: :get %></td>
+    <td><%= button_to 'Delete', { action:'destroy', id: song.id, remote: true}, {method: :delete, confirm: "Are you sure?" } %></td>
   </tr>
 <% end %>
 </table>

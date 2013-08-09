@@ -21,7 +21,8 @@
 </p>
 
 <section id="audio"></section>
-<%= link_to image_tag('play.jpg'), @song.song_file.url, :class => "html5" %>
+
+<%= link_to image_tag('play.jpg'), Rails.cache.fetch('@song.title'){@song.song_file.url}, :class => "html5" %>
 <br></br>
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
