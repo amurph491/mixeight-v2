@@ -18,10 +18,8 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
 
     s3 = AWS::S3.new
-    bucket = s3.buckets['mixeight_dev']
-    s = bucket.objects[@song.song_file_file_name]
-    s.read
-
+    bucket = s3.buckets[@bucket_name]
+    s = bucket.objects[@song.id]
 
     respond_to do |format|
       format.html # show.html.erb

@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   belongs_to :group
   has_attached_file :song_file,
 	:storage => :s3,
-	:s3_credentials => Rails.root.join('config','aws.yml')
+	:s3_credentials => Rails.root.join('config','aws.yml'), :path => ":id.:extension"
   validates :title, presence: true
   validates :artist, presence: true
   validates :song_file, presence: true

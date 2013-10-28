@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0-p247'
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'aws-sdk', '~> 1.5.7'
