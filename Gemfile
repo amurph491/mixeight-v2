@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
-ruby '2.0.0'
-=======
+
 ruby '1.9.3'
->>>>>>> aws_changes
+
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'aws-sdk', '~> 1.5.7'
